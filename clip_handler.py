@@ -19,9 +19,9 @@ def dt(date_str):
     dt = datetime.strptime(date_str, '%Y-%m-%d')
     return dt
 
-def week_ago():
+def week_ago(days=7):
     today = datetime.today()
-    week_ago = today - timedelta(days=7)
+    week_ago = today - timedelta(days)
     return week_ago
 
 
@@ -42,9 +42,9 @@ streamers.columns = ['users','day']
 
 # Select users
 streamers['day'] = streamers.day.apply(dt)
-streamers['ping'] = streamers.day > week_ago()
+streamers['ping'] = streamers.day > week_ago(days=14)
 
 # Generate posting text TODO
-streamers[streamers.ping==True].users.unique()
-
-
+U = streamers[streamers.ping==True].users.unique()
+for u in U:
+    print(u)
