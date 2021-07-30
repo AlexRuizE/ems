@@ -35,6 +35,8 @@ def print_discord(uname, discord_dict=None):
 # Credentials
 user = os.environ['EMSUSER']
 pssw = os.environ['EMSPSSW']
+
+# URL
 url = 'https://ems.isitdoneyet.co.uk/log/session.log'
 
 # Get logs
@@ -66,7 +68,7 @@ discord = {
     'carnalex': '@carnalex#9125',
     'robby': '@robby#4024',
     'Data': '@Data#3968',
-    'chthonicyouth': '@chthonicyouth#9534',
+    'Cauldron of Bats': '@chthonicyouth#9534',
     'Sh0ckValue': '@Sh0ckValue#5747',
     'bbartokk': '@bbartokk#1450',
     'neomono': '@neomono#1213',
