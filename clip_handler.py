@@ -6,6 +6,7 @@ from datetime import datetime, timedelta
 import pandas as pd
 
 
+
 def substr(str_, type_=None):
     assert type_ in ('user', 'date'), 'type_one of <user>, <date>'
     if type_=='user':
@@ -18,6 +19,8 @@ def substr(str_, type_=None):
 def dt(date_str):
     dt = datetime.strptime(date_str, '%Y-%m-%d')
     return dt
+
+
 
 def week_ago(days=14):
     today = datetime.today()
@@ -32,9 +35,9 @@ def print_discord(uname, discord_dict=None):
     return n
 
 
-# Credentials
-user = "carnalex" #os.environ['EMSUSER']
-pssw = os.environ['EMSPSSW']
+# # Credentials
+# user = os.environ['EMSUSER']
+# pssw = os.environ['EMSPSSW']
 
 # URL
 url = 'https://ems.isitdoneyet.co.uk/log/session.log'
@@ -53,7 +56,7 @@ streamers.columns = ['users','day']
 streamers['day'] = streamers.day.apply(dt)
 streamers['ping'] = streamers.day > week_ago(days=14)
 
-# Generate posting text TODO
+# Generate posting text
 U = streamers[streamers.ping==True].users.unique()
 
 # User Discord id.
@@ -92,10 +95,27 @@ discord = {
     'jroo':'@jroo#0413',
     '1ajs':'@tdk#0114',
     'Frederick Foxtrott':'@Frederick Foxtrott#2915',
-    'Chris M':'@Yukiko Kami#6627',
-    'forestine':'@forestine#3515'
+    'chrism':'@Yukiko Kami#6627',
+    'forestine':'@forestine#3515',
+    'openfields':'@openfields#4709',
+    'Dilligaf': '@Dilligaf#5766',
+    'Cognitive Dissident':'@Cognitive Dissident#5251'
 }
 
 # Get final list
+text = """HELLO STREAMERS! I need your 1 min clips for instagram. Remember: We stream. We record. We send 1 min clips. IT'S THE LAW. \
+(JK it's voluntary but help me promote this awesome community!)
+ 
+For those who've never done it: 1) clip your video to generate an mp4 (strongly preferred) using any software, screen\
+recording your phone, etc, 2) upload it to Dropbox/WeTransfer/GoogleDrive whatever, \
+3) send me a link to your upload via DM. 
+ 
+If you've sent me multiple vids/folders in the past I kindly ask you to ping me again to be queued again, pretty please.
+ 
+DM me if you want to be removed from these scattered pings.
+
+"""
+
+print(text)
 for u in U:
     print(print_discord(u, discord))
