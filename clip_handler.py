@@ -33,7 +33,7 @@ def print_discord(uname, discord_dict=None):
 
 
 # Credentials
-user = os.environ['EMSUSER']
+user = "carnalex" #os.environ['EMSUSER']
 pssw = os.environ['EMSPSSW']
 
 # URL
@@ -76,7 +76,24 @@ discord = {
     'ma yir': '@ma yir#9841',
     'enthusiasticElectrons': '@timcode#3086',
     'tdk#0114': '@tdk#0114',
-    'T.D.C. DOORS': '@T.D.C. DOORS#9622'
+    'T.D.C. DOORS': '@T.D.C. DOORS#9622',
+    'wildwildmike':'@wildwildmike#7117',
+    'Synsor':'@Synsor#0089',
+    'fuzzybeeps': '@mooglespy#1532',
+    'alexbarnett': '@alexbarnett#7401',
+    'eising':'@eising#8829',
+    'BeniRose':'@BeniRose#8633',
+    'AlexLines':'@AlexLines#0047',
+    'benofbrown':'@benofbrown#7280',
+    'subjectivize':'@subjectivize#8719',
+    u'reina (*Ëï¸¶Ë*).ï½¡*â¡':'@_idkreina#1721',
+    'kylesignalsounds':'@kylesignalsounds#7012',
+    'needless mustard':'@needless mustard#5486',
+    'jroo':'@jroo#0413',
+    '1ajs':'@tdk#0114',
+    'Frederick Foxtrott':'@Frederick Foxtrott#2915',
+    'Chris M':'@Yukiko Kami#6627',
+    'forestine':'@forestine#3515'
 }
 
 # Get final list
